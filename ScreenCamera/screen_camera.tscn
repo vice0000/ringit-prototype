@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtmxisgr8l1ck"]
+
+[ext_resource type="Script" uid="uid://boe4nh78h5hl8" path="res://ScreenCamera/ScreenCamera.gd" id="1_p16lo"]
+
+[node name="ScreenCamera" type="Camera2D"]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+position_smoothing_speed = 4.0
+drag_vertical_enabled = true
+script = ExtResource("1_p16lo")
+target = NodePath("../Player")

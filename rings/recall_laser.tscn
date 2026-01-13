@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgis7jrdtgw3u"]
+
+[ext_resource type="Script" uid="uid://dy4gfrby74dy4" path="res://World/recall_laser.gd" id="1_bcx72"]
+[ext_resource type="Texture2D" uid="uid://earknuqsdfpe" path="res://Art/beam_gradient.png" id="2_n8gi4"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_eue43"]
+b = Vector2(0, 224)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_kioq2"]
+blend_mode = 1
+
+[node name="Recall Laser" type="Area2D"]
+script = ExtResource("1_bcx72")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("SegmentShape2D_eue43")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+scale = Vector2(0.1, 1)
+color = Color(0.7, 0.95500004, 1, 0.6784314)
+polygon = PackedVector2Array(0, 0, 0, 112.05797, 0, 224, 32, 224, 32, 96, 32, 0)
+
+[node name="glow" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0.73333323, 0.88, 0.21568628)
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_kioq2")
+position = Vector2(3.9999998, 112.04751)
+scale = Vector2(0.13333333, 0.74635005)
+texture = ExtResource("2_n8gi4")
+
+[node name="particles" type="CPUParticles2D" parent="."]
+position = Vector2(0.985, 0)
+amount = 15
+texture = ExtResource("2_n8gi4")
+lifetime = 7.0
+preprocess = 7.0
+emission_shape = 3
+emission_rect_extents = Vector2(14.015, 0)
+direction = Vector2(0, 1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 32.45
+initial_velocity_max = 32.6
+scale_amount_min = 0.0
+scale_amount_max = 0.01
+color = Color(0.68, 0.984, 1, 0.78431374)

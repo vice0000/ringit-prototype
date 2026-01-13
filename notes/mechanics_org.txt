@@ -1,0 +1,74 @@
+------------
+
+- you can walk ✅
+- you can jump ✅
+- you can walk and jump at the same time to cross gaps ✅
+- get to the goal flag! ✅
+- spikes mean you cant walk there or the room progress is reset ✅
+- get used to the jump & walk controls and physics, + avoiding spikes precisely ✅
+
+------------
+
+- theres a glowing yellow ring ✅
+- yellow rings let you jump in the air when touching them & pressing jump ✅
+- you can jump multiple times in the air via multiple yellow rings ✅
+
+- you can grab the yellow rings ✅
+- you can put the yellow ring somewhere else ✅
+- therefore, wherever you can carry&use this ring, you practically have a double jump ✅
+- you can grab and release and use as many times as you want ✅
+
+- you can use a yellow ring to reach another yellow ring ✅
+- you can only hold one ring at a time ✅
+- you can use two yellow rings to jump two gaps ✅
+- you can jump in the air with a yellow ring to put the second yellow ring even higher ✅
+- you can, in general, arrange rings in any way you want as long as you can reach there ✅
+
+------------
+
+- theres a glowing blue ring ✅
+- blue rings flip character gravity ✅
+- youll need to get used to platforming upside down ✅
+- gravity returns to normal when using a blue ring a second time ✅
+
+- you can grab a blue ring and move it elsewhere just as you do with yellows ✅
+- but if you can reach the ring after flipping gravity, you can take the ring with you easily. then: ✅
+- flip gravity, take ring with you, flip gravity again, take with you again ... ad infinitum ✅
+- if you flip gravity, sometimes you cant reach a blue ring again; youre too high up ✅
+
+- yellow and blue ring can be together in the room ✅
+- yellow ring works same with flipped grav; you just jump downward instead of up ✅
+- when you cant reach a blue ring after flipping grav, a yellow ring can help you reach it again ✅
+
+- the order you stack orbs now matters; a blue atop a yellow will work different than the vice versa ✅
+
+- triple stack of orbs is even more nuanced; blue atop yellow atop yellow,yellow atop blue atop yellow,etc✅
+
+------------
+
+- theres a laser beam ✅
+- the beam seems to rip an orb out of your hands ✅
+- when you check back, the orb has teleported to the original spawnpoint; "recaller" is a fitting name ✅
+
+- its an annoying beam that confiscates your precious toys ✅
+- so initially an obstacle: DONT let the ring touch the recaller or you lose it ✅
+- some puzzles that play with the recaller and make you think of it as an obstacle ✅
+
+- practical usage revealed - this laser is your FRIEND sometimes, you can use it to TELEPORT rings ✅
+- bring a blue ring somewhere, use, pass through a recaller, so you can use it again at its spawn (x)
+
+- practice all of this knowledge for fun in some final challenge puzzles ✅
+- game end?
+- this is getting distant so ill stop theorizing and start doing levels
+
+------------
+
+MISC:
+
+- while airborne, you can release and use an ring at the same time, never needing to touch ground.
+- SPACE + MOUSE1
+- (dunno where to teach this)
+
+- after using a ring, there's a brief 0.5s moment where you cant pick it up
+- (this is a cheat stopper so you cant flyhack with yellow rings)
+- (i dont know where to teach this either)

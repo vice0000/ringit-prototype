@@ -1,0 +1,84 @@
+[gd_scene load_steps=9 format=3 uid="uid://bk53dcu4ee037"]
+
+[ext_resource type="Script" uid="uid://2cn121d2ko68" path="res://rings/gravity_ring.gd" id="1_kao2w"]
+[ext_resource type="Texture2D" uid="uid://b8x3rv8tdlcbm" path="res://Art/Circle.png" id="2_mitue"]
+[ext_resource type="Texture2D" uid="uid://yoqg3v6pfnai" path="res://Art/generic_ring.png" id="3_2103i"]
+[ext_resource type="Texture2D" uid="uid://ddadmf1vacivo" path="res://Art/radial_gradient.png" id="4_0l0kd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kao2w"]
+radius = 25.0
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ytrdx"]
+blend_mode = 1
+
+[sub_resource type="Curve" id="Curve_byvwj"]
+_limits = [-200.0, 200.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.7873134, -6.220825), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_2103i"]
+offsets = PackedFloat32Array(0, 0.1322314, 0.6528926, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="Gravity Ring" type="Node2D"]
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_kao2w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.5019608)
+scale = Vector2(0.09374988, 0.09374988)
+texture = ExtResource("2_mitue")
+
+[node name="Ring" type="Area2D" parent="."]
+modulate = Color(0, 0.9843137, 1, 1)
+
+[node name="Collision" type="CollisionShape2D" parent="Ring"]
+position = Vector2(-2.9802317e-07, 2.9802317e-07)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("CircleShape2D_kao2w")
+
+[node name="Texture" type="Sprite2D" parent="Ring"]
+scale = Vector2(0.16666667, 0.16666667)
+texture = ExtResource("3_2103i")
+
+[node name="Arrow_A" type="Polygon2D" parent="Ring"]
+rotation = 1.5707964
+scale = Vector2(0.585, 0.585)
+polygon = PackedVector2Array(0, 0, 20, 0, 20, -5, 31, 0, 20, 5, 20, 0, 20, 2, 0, 2, -2, 2, -2, -2, 20, -2, 20, 0)
+
+[node name="Arrow_B" type="Polygon2D" parent="Ring"]
+rotation = 4.712389
+scale = Vector2(0.585, 0.585)
+polygon = PackedVector2Array(0, 0, 20, 0, 20, -5, 31, 0, 20, 5, 20, 0, 20, 2, 0, 2, -2, 2, -2, -2, 20, -2, 20, 0)
+
+[node name="Texture2" type="Sprite2D" parent="Ring"]
+self_modulate = Color(0.46, 0.46, 0.46, 0.3882353)
+material = SubResource("CanvasItemMaterial_ytrdx")
+scale = Vector2(0.09791666, 0.09791666)
+texture = ExtResource("4_0l0kd")
+
+[node name="Texture3" type="Sprite2D" parent="Ring"]
+modulate = Color(0.3019608, 0.3019608, 0.3019608, 0.7058824)
+material = SubResource("CanvasItemMaterial_ytrdx")
+position = Vector2(3.8146973e-06, 1.9073486e-06)
+scale = Vector2(0.25781244, 0.2561198)
+texture = ExtResource("4_0l0kd")
+
+[node name="Particles" type="CPUParticles2D" parent="Ring"]
+amount = 12
+texture = ExtResource("3_2103i")
+speed_scale = 0.75
+emission_shape = 1
+emission_sphere_radius = 46.4
+spread = 180.0
+gravity = Vector2(0, -10)
+radial_accel_max = 100.0
+radial_accel_curve = SubResource("Curve_byvwj")
+tangential_accel_max = 100.0
+damping_max = 14.483
+scale_amount_min = 0.01
+scale_amount_max = 0.02
+color = Color(1, 1, 1, 0.2)
+color_ramp = SubResource("Gradient_2103i")
+hue_variation_min = -0.06
+hue_variation_max = 0.06

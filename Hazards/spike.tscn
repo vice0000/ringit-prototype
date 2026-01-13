@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://c47od8xmqg55a"]
+
+[ext_resource type="Script" uid="uid://big0lr0i6mi2p" path="res://World/hazard.gd" id="1_gsvon"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dij7u"]
+size = Vector2(8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gsvon"]
+size = Vector2(14.36, 0.5)
+
+[node name="Spike" type="Area2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_gsvon")
+
+[node name="shape" type="Polygon2D" parent="."]
+position = Vector2(-8, 0)
+color = Color(0.39106372, 5.8358535e-07, 2.1658838e-07, 1)
+polygon = PackedVector2Array(0, 0, 8, -16, 16, 0)
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_dij7u")
+
+[node name="hitbox2" type="CollisionShape2D" parent="."]
+position = Vector2(1.1920929e-07, -0.23)
+shape = SubResource("RectangleShape2D_gsvon")

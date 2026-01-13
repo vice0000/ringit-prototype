@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://bgkcwt2jh2gkm"]
+
+[ext_resource type="Script" uid="uid://cbpb6b8fiuore" path="res://rings/jump_ring.gd" id="1_rrnv4"]
+[ext_resource type="Texture2D" uid="uid://b8x3rv8tdlcbm" path="res://Art/Circle.png" id="2_w744d"]
+[ext_resource type="Texture2D" uid="uid://daw8sr4kdk0it" path="res://Art/jump_ring.png" id="3_t2b6n"]
+[ext_resource type="Texture2D" uid="uid://ddadmf1vacivo" path="res://Art/radial_gradient.png" id="4_gijvx"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_r71hm"]
+blend_mode = 1
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w744d"]
+radius = 25.0
+
+[sub_resource type="Gradient" id="Gradient_t2b6n"]
+offsets = PackedFloat32Array(0.7066116, 1)
+colors = PackedColorArray(1, 1, 1, 0.646281, 1, 1, 1, 0)
+
+[node name="Jump Ring" type="Node2D"]
+modulate = Color(0.98222905, 0.84186983, 1.1551381e-06, 1)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_rrnv4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.5019608)
+scale = Vector2(0.09374988, 0.09374988)
+texture = ExtResource("2_w744d")
+
+[node name="Ring" type="Area2D" parent="."]
+
+[node name="Texture" type="Sprite2D" parent="Ring"]
+scale = Vector2(0.1666666, 0.1666666)
+texture = ExtResource("3_t2b6n")
+
+[node name="Texture2" type="Sprite2D" parent="Ring"]
+self_modulate = Color(0.46229059, 0.46229059, 0.46229059, 0.64705884)
+material = SubResource("CanvasItemMaterial_r71hm")
+scale = Vector2(0.09791666, 0.09791666)
+texture = ExtResource("4_gijvx")
+
+[node name="Texture3" type="Sprite2D" parent="Ring"]
+modulate = Color(0.3019608, 0.3019608, 0.3019608, 0.7058824)
+material = SubResource("CanvasItemMaterial_r71hm")
+position = Vector2(3.8146973e-06, 1.9073486e-06)
+scale = Vector2(0.25781244, 0.2561198)
+texture = ExtResource("4_gijvx")
+
+[node name="Collision" type="CollisionShape2D" parent="Ring"]
+visible = false
+position = Vector2(-3.576278e-06, -3.576278e-06)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("CircleShape2D_w744d")
+debug_color = Color(0.60001606, 0.53520787, 0.19193676, 0.36078432)
+
+[node name="Particles" type="CPUParticles2D" parent="Ring"]
+texture = ExtResource("2_w744d")
+speed_scale = 1.25
+explosiveness = 0.1
+randomness = 0.5
+emission_shape = 1
+emission_sphere_radius = 40.8
+spread = 180.0
+gravity = Vector2(0, -10)
+radial_accel_min = -9.66
+radial_accel_max = 9.66
+scale_amount_min = 0.0
+scale_amount_max = 0.01
+color = Color(1, 1, 1, 0.2)
+color_ramp = SubResource("Gradient_t2b6n")
+hue_variation_min = -0.06
+hue_variation_max = 0.06

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqskwr3b4y44a"]
+
+[ext_resource type="Script" uid="uid://bpnad56qw8x35" path="res://Platforms/breaking_block.gd" id="1_m1fq8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vhy2d"]
+size = Vector2(32, 32)
+
+[node name="breaking_block" type="StaticBody2D"]
+collision_layer = 14
+collision_mask = 0
+script = ExtResource("1_m1fq8")
+
+[node name="coll" type="CollisionShape2D" parent="."]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_vhy2d")
+
+[node name="texture" type="Polygon2D" parent="."]
+color = Color(0.23849998, 0.45, 0.30547497, 1)
+polygon = PackedVector2Array(0, 0, 0, 32, 32, 32, 32, 0)
+
+[node name="world_hitbox" type="Area2D" parent="."]
+collision_layer = 15
+collision_mask = 15
+
+[node name="coll" type="CollisionShape2D" parent="world_hitbox"]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_vhy2d")
