@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://biqlj7fsgh8tb"]
+
+[node name="Background" type="ColorRect"]
+offset_left = -3296.0
+offset_top = -512.0
+offset_right = 3424.0
+offset_bottom = 2976.0
+color = Color(0.13870344, 0.21083984, 0.107407354, 1)
+metadata/_edit_use_anchors_ = true
