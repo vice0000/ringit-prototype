@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://8xwixmg35map"]
+
+[ext_resource type="Script" uid="uid://d3bki3yany8na" path="res://root.gd" id="1_pq8q7"]
+
+[node name="Root" type="Node"]
+script = ExtResource("1_pq8q7")
+current_world_index = 19
