@@ -7,3 +7,8 @@ prototype for my puzzle platformer in Godot.
 - open the executable file (.exe on Windows, .x86_64 on linux)
 - if windows screams at you ("windows protected your pc" popup) just hit **Read More** and run. its a false positive, as i havent fiddled with any publishing or anything yet
 - enjoy! report bugs and send feedback on gameplay, **preferably record footage of your blind run**
+
+## build:
+- clone the repo to a folder
+- import the folder as a project in Godot v4.5.1
+- Project -> Export
